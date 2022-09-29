@@ -1,5 +1,6 @@
-var things = [1, 2, function(){alert(things)}];
-
-things[2]();
-
-console.log(things);
+var tb = document.getElementsByClassName("name")
+console.log(tb);
+tb.addEventListener("keypress", 
+function (event) {
+  console.log("Pressed");
+});
