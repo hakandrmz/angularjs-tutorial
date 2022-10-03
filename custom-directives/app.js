@@ -24,9 +24,40 @@ myApp.controller("mainController", [
   "$log",
 
   function ($scope, $log) {
-    $scope.person = {
-      name: "Hakan Durmaz",
-      address: "Yıldırım/Bursa",
+    $scope.people = [
+      {
+        name: "Hakan Durmaz",
+        address: "Yıldırım",
+        city: "Bursa",
+        state: "Marmara",
+        zip: "16310",
+      },
+      {
+        name: "Icardi",
+        address: "Arena",
+        city: "İstanbul",
+        state: "Marmara",
+        zip: "34001",
+      },
+      {
+        name: "Fatih Terim",
+        address: "Bodrum",
+        city: "Mugla",
+        state: "Ege",
+        zip: "10101",
+      },
+    ];
+
+    $scope.formattedAddress = function (person) {
+      return (
+        person.address +
+        ", " +
+        person.city +
+        ", " +
+        person.state +
+        ", " +
+        person.zip
+      );
     };
   },
 ]);
@@ -46,6 +77,7 @@ myApp.directive("searchResult", function () {
     replace: true,
     scope: {
       personObject: "=",
+      formattedAddressFunction: "&",
     },
   };
 });
