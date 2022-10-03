@@ -79,16 +79,6 @@ myApp.directive("searchResult", function () {
       personObject: "=",
       formattedAddressFunction: "&",
     },
-    link: function (scope, elements, attrs) {
-      console.log("Linking...");
-
-      /*       if (scope.personObject.name == "Hakan Durmaz") {
-        elements.removeAttr("class");
-      } */
-
-      console.log(elements);
-      console.log(scope);
-      console.log(attrs);
-    },
+    transclude: true
   };
 });
