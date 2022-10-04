@@ -15,8 +15,5 @@ myApp.controller("mainController", function ($scope, $log, $filter, $resource) {
   $log.info($scope.name);
   $log.info($scope.formattedName); */
 
-  
   console.log($resource);
-
-  
 });

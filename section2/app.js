@@ -1,5 +1,3 @@
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module("myApp", []);
 
-myApp.controller('mainController',function () {
-    
-});
+myApp.controller("mainController", function () {});

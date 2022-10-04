@@ -79,6 +79,6 @@ myApp.directive("searchResult", function () {
       personObject: "=",
       formattedAddressFunction: "&",
     },
-    transclude: true
+    transclude: true,
   };
 });
